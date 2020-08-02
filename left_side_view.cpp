@@ -73,14 +73,13 @@ void level_order(Tree*& root)
       cout << q.front().first->data << " ";
       curr = q.front().second;
     }
-    //cout << q.front().first->data << " ";
     if(q.front().first->left != NULL)
     {
-      q.push(make_pair(q.front().first->left,curr+1));
+      q.push(make_pair(q.front().first->left,q.front().second+1));
     }
     if(q.front().first->right != NULL)
     {
-      q.push(make_pair(q.front().first->right,curr+1));
+      q.push(make_pair(q.front().first->right,q.front().second+1));
     }
     q.pop();
   }
