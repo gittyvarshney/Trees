@@ -13,6 +13,10 @@ using namespace std;
 //Note that this algorithm doesn't work for the tree where we have duplicate
 //elements for this refer to implementation using stack and set
 
+//Note for inorder and post order same principle applies but you have to
+//take the last element as root
+//and thus decrement index to take first right subtree and left subtree
+
 bool flag;
 
 class Tree
